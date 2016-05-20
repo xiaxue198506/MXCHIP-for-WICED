@@ -9,9 +9,16 @@
 * Download all files from the current repository to your local directory.
 
 ###Using Git and Apply Patch file
-* Create a git repository for WICED-SDK-3.5.2. Note: you must complete the local submission of the repository in your computer. 
-* In this repository, you need run `git apply mxchip_for_wiced_3.5.2_patch` with git command line or graphical git command. This will decompress and patch WICED SDK.
+* Create a git repository for WICED-SDK-3.5.2 and commit it to your local repository.
+* If you use git command line, do the following 3 steps : 
+* 1. Put `mxchip_for_wiced_3.5.2_patch.diff` from the directory `MXCHIP-for-WICED-master\patchs` to  WICED-SDK-3.5.2 repository.
+* 2. Make sure commit all files in `WICED-SDK-3.5.2` to your local repository.
+* 3. In this repository, you need run `git apply mxchip_for_wiced_3.5.2_patch.diff` with git command line. This will patch WICED SDK.
+* If you use graphical git command,It's not necessary to put `MXCHIP-for-WICED-master\patchs` in repository. Do the following 2 steps.
+* 1. In the repository `WICED-SDK-3.5.2`,through your graphical tool, please enter into the `Apply Patch` interface.
+* 2. Add the file `mxchip_for_wiced_3.5.2_patch.diff`and start the apply patch process.
 * As a result,you will find in the path `WICED-SDK-3.5.2\platforms`，there are 2 folders added which are EMW3162 and EMW3165.
+
 
 ###Or Replace target files manually
 * Add the file `EMW3162`,`EMW3165` in patchs directory to the WICED-SDK-3.5.2 directory `WICED-SDK\platforms`.
